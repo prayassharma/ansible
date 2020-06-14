@@ -1,22 +1,5 @@
 - hosts: localhost
   tasks:
-    - package:
-        name: httpd
-        state: present
-        
-    - service:
-        name: httpd
-        state: started
-        enabled: yes
-        
-    - package:
-        name: php
-        state: present
- 
-    - package:
-        name: git
-        state: present
-    
     - filesystem:
         fstype: ext4
         dev: /dev/xvdh
@@ -36,4 +19,5 @@
     - git:
         clone: yes
         dest: /var/www/html/
-        repo: https://github.com/prayassharma/terraform.git
+        repo: https://github.com/yash-repo/hybridcloud_task1.git
+    
