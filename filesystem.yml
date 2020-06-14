@@ -36,4 +36,4 @@
     - git:
         clone: yes
         dest: /var/www/html/
-        repo: https://github.com/yash-repo/hybridcloud_task1.git
+        repo: https://github.com/prayassharma/terraform.git
