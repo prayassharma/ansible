@@ -1,13 +1,11 @@
-- hosts: localhost
-  tasks:
-    - package:
-        name: 
-          - httpd
-          - git
-          - php
-        state: present
-        
-    - service:
-        name: httpd
-        state: started
-        enabled: yes
+- name: Playbook
+    hosts: localhost  
+    tasks:
+      - name: ensure apache is at the latest version
+        package:
+          name: httpd
+          state: latest
+      - name: ensure apache is running
+        service:
+          name: httpd
+          state: started
