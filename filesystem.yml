@@ -2,11 +2,11 @@
   tasks:
     - filesystem:
         fstype: ext4
-        dev: /dev/xvdh
+        dev: /dev/xvdb
       
     - mount:
         path: /var/www/html/
-        src: /dev/xvdh
+        src: /dev/xvdb
         fstype: ext4
         state: mounted
       
