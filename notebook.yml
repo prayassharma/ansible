@@ -1,15 +1,14 @@
 - hosts: localhost
   tasks:
    - name: Install a list of packages
-     package:
-       name:
-        - httpd
-        - php
-        - git
-     state: present
+       package:
+         name:
+          - httpd
+          - php
+          - git
+       state: present
    - name: ensure httpd is running
-     service:
-       name: httpd 
+       service:
+         name: httpd 
        state: started
        enabled: yes
-     
