@@ -1,18 +1,15 @@
 - hosts: localhost
   tasks:
-    - package:
-        name: httpd
-        state: present
-        
-    - service:
-        name: httpd
-        state: started
-        enabled: yes
-        
-    - package:
-        name: php
-        state: present
- 
-    - package:
-        name: git
-        state: present
+   - name: Install a list of packages
+     yum:
+       name:
+        - httpd
+        - php
+        - git
+     state: present
+   - name: ensure httpd is running
+     service:
+       name: httpd 
+       state: started
+       enabled: yes
+     
