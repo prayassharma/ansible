@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+    - package:
+        name: 
+          - httpd
+          - git
+          - php
+        state: present
+        
+    - service:
+        name: httpd
+        state: started
+        enabled: yes
